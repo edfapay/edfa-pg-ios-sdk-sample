@@ -1,0 +1,54 @@
+#Android
+*.iml
+.gradle
+**/build/
+**/build/*
+/reports
+/local.properties
+/app/release
+/app/debug
+.DS_Store
+/captures
+/Sample/Credentials.swift
+.externalNativeBuild
+
+.idea/*
+
+#!/.idea/dictionaries
+#!/.idea/codeStyles
+#!/.idea/runConfigurations
+#!/.idea/codeStyles/*
+#!/.idea/dictionaries/*
+#!.idea/inspectionProfiles
+
+#KMP
+malo_kmp
+malo_kmp/*
+
+#iOS
+
+# MacOS Specific
+# Build generated
+build/
+DerivedData/
+# Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+# Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+# Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+# CocoaPods
+Pods/

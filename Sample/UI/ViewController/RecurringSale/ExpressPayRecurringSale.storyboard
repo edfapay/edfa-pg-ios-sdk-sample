@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bKm-Ah-2ix">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Recurring Sale-->
+        <scene sceneID="w4u-Pb-JP0">
+            <objects>
+                <viewController id="bKm-Ah-2ix" customClass="ExpressPayRecurringSaleVC" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dG4-CO-m0Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="avp-i1-dMh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5p-Sb-fIG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="986"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="kZo-cb-RcM">
+                                                <rect key="frame" x="16" y="16" width="382" height="954"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8rX-lD-JE4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="142.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transactions:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNs-dd-n3K">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qI9-7n-x65">
+                                                                <rect key="frame" x="0.0" y="36.5" width="382" height="106"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDi-HI-G5c" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
+                                                                        <state key="normal" title="Load Recurring Sale"/>
+                                                                        <connections>
+                                                                            <action selector="loadRecurringSaleAction" destination="bKm-Ah-2ix" eventType="touchUpInside" id="a3X-23-6Qn"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAp-oL-iQJ" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="38" width="382" height="30"/>
+                                                                        <state key="normal" title="Load All"/>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5on-Sd-5xT" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="76" width="382" height="30"/>
+                                                                        <state key="normal" title="Select Transaction"/>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="36R-4F-yuc">
+                                                        <rect key="frame" x="0.0" y="174.5" width="382" height="36.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Transaction:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18f-k1-SNU">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkr-48-TBm">
+                                                                <rect key="frame" x="0.0" y="36.5" width="382" height="0.0"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CQq-E5-dHO">
+                                                        <rect key="frame" x="0.0" y="243" width="382" height="112.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recurring:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="953-vS-Elj">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uvi-fo-wBJ">
+                                                                <rect key="frame" x="0.0" y="36.5" width="382" height="76"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recurring First Trans ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EFw-7d-Z8w">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recurring Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAw-nb-Uqn">
+                                                                        <rect key="frame" x="0.0" y="42" width="382" height="34"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kk9-Oj-Cyx" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="387.5" width="382" height="30"/>
+                                                        <state key="normal" title="Randomize"/>
+                                                        <connections>
+                                                            <action selector="randomizeAction" destination="bKm-Ah-2ix" eventType="touchUpInside" id="3cE-cl-JOa"/>
+                                                        </connections>
+                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="D1D-Ey-MvN">
+                                                        <rect key="frame" x="0.0" y="449.5" width="382" height="154.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYD-4R-HGH">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ruh-G0-uZP">
+                                                                <rect key="frame" x="0.0" y="36.5" width="382" height="118"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Order ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t9t-cY-18n">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Order Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a4s-bD-zR0">
+                                                                        <rect key="frame" x="0.0" y="42" width="382" height="34"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Order Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j1k-EZ-Jd6">
+                                                                        <rect key="frame" x="0.0" y="84" width="382" height="34"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="g90-SK-VIs">
+                                                        <rect key="frame" x="0.0" y="636" width="382" height="66.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vl-G8-76K">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fPb-5X-Nuh">
+                                                                <rect key="frame" x="0.0" y="36.5" width="382" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwn-0Z-aJf" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="30"/>
+                                                                        <state key="normal" title="R. Auth"/>
+                                                                        <connections>
+                                                                            <action selector="authAction" destination="bKm-Ah-2ix" eventType="touchUpInside" id="gIh-mo-0FV"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGT-iY-6U2" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                                                        <rect key="frame" x="195" y="0.0" width="187" height="30"/>
+                                                                        <state key="normal" title="R. Sale"/>
+                                                                        <connections>
+                                                                            <action selector="saleAction" destination="bKm-Ah-2ix" eventType="touchUpInside" id="KHX-MS-ngs"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fq0-IF-6yn">
+                                                        <rect key="frame" x="0.0" y="734.5" width="382" height="219.5"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3wE-X6-zxu">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Response:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtO-Es-9FQ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="20"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="751" verticalCompressionResistancePriority="751" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="QMp-j7-Vry">
+                                                                        <rect key="frame" x="88" y="0.0" width="20" height="20"/>
+                                                                        <color key="color" name="Orange"/>
+                                                                    </activityIndicatorView>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6T4-he-y4H">
+                                                                        <rect key="frame" x="116" y="0.0" width="266" height="20"/>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    </view>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eJl-YP-I34">
+                                                                <rect key="frame" x="0.0" y="36" width="382" height="183.5"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                                <color key="textColor" systemColor="labelColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="kZo-cb-RcM" firstAttribute="top" secondItem="P5p-Sb-fIG" secondAttribute="top" constant="16" id="7mC-gh-JzX"/>
+                                            <constraint firstAttribute="bottom" secondItem="kZo-cb-RcM" secondAttribute="bottom" constant="16" id="8ym-Xq-ikj"/>
+                                            <constraint firstAttribute="trailing" secondItem="kZo-cb-RcM" secondAttribute="trailing" constant="16" id="ORM-qK-10k"/>
+                                            <constraint firstItem="kZo-cb-RcM" firstAttribute="leading" secondItem="P5p-Sb-fIG" secondAttribute="leading" constant="16" id="vlT-mR-5cV"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="P5p-Sb-fIG" firstAttribute="width" secondItem="avp-i1-dMh" secondAttribute="width" id="GRQ-4F-TjO"/>
+                                    <constraint firstAttribute="trailing" secondItem="P5p-Sb-fIG" secondAttribute="trailing" id="RGw-U8-YoZ"/>
+                                    <constraint firstItem="P5p-Sb-fIG" firstAttribute="top" secondItem="avp-i1-dMh" secondAttribute="top" id="VYB-Nq-nay"/>
+                                    <constraint firstItem="P5p-Sb-fIG" firstAttribute="leading" secondItem="avp-i1-dMh" secondAttribute="leading" id="aa3-IM-Bmj"/>
+                                    <constraint firstAttribute="bottom" secondItem="P5p-Sb-fIG" secondAttribute="bottom" id="bu3-2e-YxO"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AbG-RI-ffx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="avp-i1-dMh" firstAttribute="top" secondItem="dG4-CO-m0Y" secondAttribute="top" id="Mmh-1C-eBw"/>
+                            <constraint firstItem="avp-i1-dMh" firstAttribute="leading" secondItem="dG4-CO-m0Y" secondAttribute="leading" id="kIM-HU-tz9"/>
+                            <constraint firstAttribute="trailing" secondItem="avp-i1-dMh" secondAttribute="trailing" id="qER-ww-HN3"/>
+                            <constraint firstAttribute="bottom" secondItem="avp-i1-dMh" secondAttribute="bottom" id="uS0-Cl-5WV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Recurring Sale" id="cu4-b9-BXN"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="btnAuth" destination="fwn-0Z-aJf" id="FfR-4m-WiL"/>
+                        <outlet property="btnLoadAll" destination="yAp-oL-iQJ" id="NBM-cs-LtJ"/>
+                        <outlet property="btnSale" destination="HGT-iY-6U2" id="zMC-Us-UkN"/>
+                        <outlet property="btnSelectTransaction" destination="5on-Sd-5xT" id="FZF-7y-6vE"/>
+                        <outlet property="lbResponse" destination="eJl-YP-I34" id="uCN-Bs-pau"/>
+                        <outlet property="lbSelectedTransaction" destination="Bkr-48-TBm" id="5MJ-xh-OFX"/>
+                        <outlet property="loader" destination="QMp-j7-Vry" id="gy6-iX-odL"/>
+                        <outlet property="scrollView" destination="avp-i1-dMh" id="loy-Ix-Z5d"/>
+                        <outlet property="tfOrderAmount" destination="a4s-bD-zR0" id="P7b-4s-0xv"/>
+                        <outlet property="tfOrderDescription" destination="j1k-EZ-Jd6" id="0OY-H5-tnA"/>
+                        <outlet property="tfOrderId" destination="t9t-cY-18n" id="KwC-ys-cbJ"/>
+                        <outlet property="tfRecurringFirstTransId" destination="EFw-7d-Z8w" id="pFr-tv-3nH"/>
+                        <outlet property="tfRecurringToken" destination="RAw-nb-Uqn" id="UYr-oz-GWH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oZK-Mn-g7F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2668" y="-591"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Orange">
+            <color red="0.92549019607843142" green="0.30980392156862746" blue="0.22352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

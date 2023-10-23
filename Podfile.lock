@@ -1,0 +1,16 @@
+PODS:
+  - ExpressPaySDK (1.1.1)
+
+DEPENDENCIES:
+  - ExpressPaySDK
+
+SPEC REPOS:
+  trunk:
+    - ExpressPaySDK
+
+SPEC CHECKSUMS:
+  ExpressPaySDK: e032f322a927b94ae64f1993ae669fd1df13ef13
+
+PODFILE CHECKSUM: 0e89a2bcb142341505e9e0fd69d3bdd9195605d3
+
+COCOAPODS: 1.12.1
