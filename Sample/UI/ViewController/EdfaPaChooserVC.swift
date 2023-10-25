@@ -1,13 +1,13 @@
 //
-//  ExpressPayChooserVC.swift
+//  EdfaPgChooserVC.swift
 //  Sample
 //
-//  Created by ExpressPay(zik) on 11.03.2021.
+//  Created by EdfaPg(zik) on 11.03.2021.
 //
 
 import UIKit
 
-final class ExpressPayChooserVC<T: CustomStringConvertible>: UITableViewController {
+final class EdfaPgChooserVC<T: CustomStringConvertible>: UITableViewController {
     var data: [T] = []
     var completion: ((T) -> Void)?
     

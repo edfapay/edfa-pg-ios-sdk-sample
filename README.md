@@ -1,31 +1,31 @@
-[View SDK Wiki](https://github.com/ExpresspaySa/expresspay-ios-sdk-pod/wiki) | [Report new issue](https://github.com/ExpresspaySa/expresspay-ios-sdk-pod/issues/new)
+[View SDK Wiki](https://github.com/edfapay/edfa-pg-ios-sdk-pod /wiki) | [Report new issue](https://github.com/edfapay/edfa-pg-ios-sdk-pod /issues/new)
 
-# ExpressPay iOS SDK
+# EdfaPg iOS SDK
 
-ExpressPay is a payment gateway. Thanks to our 15+ years of experience in the payment industry, we’ve developed a state-of-the-art white-label payment system that ensures smooth and uninterrupted payment flow for merchants across industries.
+EdfaPg is a payment gateway. Thanks to our 15+ years of experience in the payment industry, we’ve developed a state-of-the-art white-label payment system that ensures smooth and uninterrupted payment flow for merchants across industries.
 
 <p align="center">
-  <a href="https://expresspay.sa">
-      <img src="/media/header.png" alt="ExpressPay" width="400px"/>
+  <a href="https://edfapay.com">
+      <img src="/media/header.png" alt="EdfaPg" width="400px"/>
   </a>
 </p>
 
-ExpressPay iOS SDK was developed and designed with one purpose: to help the iOS developers easily integrate the ExpressPay API Payment Platform for a specific merchant. 
+EdfaPg iOS SDK was developed and designed with one purpose: to help the iOS developers easily integrate the EdfaPg API Payment Platform for a specific merchant. 
 
-The main aspects of the ExpressPay iOS SDK:
+The main aspects of the EdfaPg iOS SDK:
 
 - [Swift](https://developer.apple.com/swift/) is the main language 
 - Minimum iOS 11
 - Sample Application
 
-To get used to the SDK, download a [sample app](https://github.com/ExpresspaySa/expresspay-ios-sdk-sample).
+To get used to the SDK, download a [sample app](https://github.com/edfapay/edfa-pg-ios-sdk-sample ).
 
 ## Setup
 
 Add to the `Podfile`:
 
 ```
-pod 'ExpressPaySDK'
+pod 'EdfaPgSdk'
 ```
 
 Always download latest version by run `pod update` or `pod install --repo-update`
@@ -42,19 +42,19 @@ Always download latest version by run `pod update` or `pod install --repo-update
 
 ## Getting help
 
-To report a specific issue or feature request, open a [new issue](https://github.com/ExpresspaySa/expresspay-ios-sdk-pod/issues/new).
+To report a specific issue or feature request, open a [new issue](https://github.com/edfapay/edfa-pg-ios-sdk-pod /issues/new).
 
-Or write a direct letter to the [itsupport@expresspay.sa](mailto:admin@expresspay.sa).
+Or write a direct letter to the [itsupport@edfapay.com](mailto:admin@edfapay.com).
 
 ## License
 
-MIT License. See the [LICENSE](https://github.com/ExpresspaySa/expresspay-ios-sdk-pod/blob/main/LICENSE) file for more details.
+MIT License. See the [LICENSE](https://github.com/edfapay/edfa-pg-ios-sdk-pod /blob/main/LICENSE) file for more details.
 
 ## Contacts
 
-Website: https://expresspay.sa  
+Website: https://edfapay.com  
 Phone: [+966920033633](tel:+966920033633)  
-Email: [itsupport@expresspay.sa](mailto:itsupport@expresspay.sa)  
-Address: ExpressPay, Olaya Street, Riyadh, Saudi Arabia
+Email: [itsupport@edfapay.com](mailto:itsupport@edfapay.com)  
+Address: EdfaPg, Olaya Street, Riyadh, Saudi Arabia
 
-© 2023 - 2024 ExpressPay. All rights reserved.
+© 2023 - 2024 EdfaPg. All rights reserved.

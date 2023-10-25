@@ -2,11 +2,11 @@
 //  MainVC.swift
 //  Sample
 //
-//  Created by ExpressPay(zik) on 10.03.2021.
+//  Created by EdfaPg(zik) on 10.03.2021.
 //
 
 import UIKit
-import ExpressPaySDK
+import EdfaPgSdk
 
 final class MainVC: UIViewController {
     
@@ -18,12 +18,12 @@ final class MainVC: UIViewController {
     @IBAction func btnPayWithCard(_ sender: Any) {
         
         // Show your app loading
-        ExpressPayPublicIP { ip, error in
+        EdfaPgPublicIP { ip, error in
             // Hide your app loading
             if let ip_ = ip{
                 self.doTransaction(ip: ip_)
             }else{
-                debugPrint("Error while getting your network public ip.\n --> Exception:(\(error.debugDescription ?? ""))")
+                debugPrint("Error while getting your network public ip.\n --> Exception:(\(error.debugDescription))")
             }
         }
         
@@ -31,13 +31,13 @@ final class MainVC: UIViewController {
     
     func doTransaction(ip:String){
         
-        let payer = ExpressPayPayer(
+        let payer = EdfaPgPayer(
             firstName: "Zohaib", lastName: "Kambrani", address: "a2zzuhaib@gmail.com",
             country: "SA", city: "Riyadh", zip: "123221",
             email: "a2zzuhaib@gmail.com", phone: "966500409598", ip: ip
         )
         
-        let order = ExpressPaySaleOrder(
+        let order = EdfaPgSaleOrder(
             id: UUID().uuidString,
             amount: 0.01,
             currency: "SAR",
@@ -47,7 +47,7 @@ final class MainVC: UIViewController {
             
         // The way to present by your style or own
 //        present(
-//            ExpressCardPay.viewController(
+//            EdfaCardPay.viewController(
 //                target: self,
 //                payer: payer,
 //                order: order,
@@ -70,18 +70,18 @@ final class MainVC: UIViewController {
         
         // The precise way to present by sdk it self
         var cardDetailVC:UIViewController?
-        cardDetailVC = ExpressCardPay()
+        cardDetailVC = EdfaCardPay()
             .set(order: order)
             .set(payer: payer)
             .on(transactionFailure: { result, err in
-                debugPrint(result)
-                debugPrint(err)
+                debugPrint(result ?? "No Result")
+                debugPrint(err ?? "No Error Summary")
                 cardDetailVC?.dismiss(animated: true)
                 self.show(message: "Failure")
             })
             .on(transactionSuccess: { res, data in
-                debugPrint(res)
-                debugPrint(data)
+                debugPrint(res ?? "Missing Result")
+                debugPrint(data ?? "Missing Data")
                 cardDetailVC?.dismiss(animated: true)
                 self.show(message: "Success")
 

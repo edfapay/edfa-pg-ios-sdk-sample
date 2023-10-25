@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 import WebKit
-import ExpressPaySDK
+import EdfaPgSdk
 
 
 class ApplePayInitiater : UIViewController{
@@ -21,8 +21,8 @@ class ApplePayInitiater : UIViewController{
     }
     
     private var logs:Bool = true
-    private var onTransactionSuccess:((ExpressPay3dsResponse)->Void)?
-    private var onTransactionFailure:((ExpressPay3dsResponse)->Void)?
+    private var onTransactionSuccess:((EdfaPg3dsResponse)->Void)?
+    private var onTransactionFailure:((EdfaPg3dsResponse)->Void)?
     
     var webView:WKWebView!
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class ApplePayInitiater : UIViewController{
         webView.loadHTMLString("<html></html>", baseURL: URL(string: "https://pay.expresspay.sa"))
         view = webView
         
-        var string = "https://pay.expresspay.sa/auth/ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKU1V6STFOaUo5LmV5SnBZWFFpT2pFMk56UTJNelkzTWpnc0ltcDBhU0k2SWpoalltWmxPV00wTFRsak9HUXRNVEZsWkMwNE9USmtMV05sTmpVM01EVXlaVEE1TlNJc0ltVjRjQ0k2TVRZM05EWTBNRE15T0gwLkRtdTZ6STRPN1NlSHJPUFE1R0sxcHFraTdFQWlzQjlnbWFpMElSYWFVZU5rSGFtS1RyYU9Fd2hIeVo3U2NYZnZ0SDEzUThQU1FCOGZuMDFFUk42a0R2d200cF9STWNOLVhLMG1TMUJ1UHlJbmEwWG1zMEF1T1NhTzkzUXdTR1VlLWU0dGtObkxKc0ZfbzZqaUsyaHRiSVpVcGF6LU5yX1pDdzE0LWVGYlR6YnVHNXg4MlRRRlZyaUs2aDBvNHd2VGFkQnc2bERPbEVOWkhxZ1N3YmpwcHA2WW5lN0xVaFBXNUNwc2VDZEczczZvWVA1U0pscWtTY2tyTjFOUlRuTEt2Z05EMzRYNGNhb0d6NTBoakVfTmpkSk1GbXE2Vl9OclNFOWxYUVJHeVJTTGxvRHFET0E0TGR2Zk1OSDNUeWhMenJXVF9KVHo0M0dOZXByZ0ZaSG8zWmtqZkg1SGpDY2lLR0R3WTF5ZlB3OHVwN0ItZzNCb0l6OHlYajJ3emVUaWxfcGZTODIyQXRnbXY1QUszdHVhNERPU2FUMFhxZ3N6X0Faamg4endzSHZNLXg2cjVxRllvQ2E4Q05mc051Z1hRSzhPYzRsQnluM2djdU9qa0JzdnMzNkh1R2ZtRVJaYnFST3UwT0h1aERRNGFwZHpxOWY1amE1dEhpeWJTM2ZVbDhPa2FaTGZKWXVhMS1hLXFORFdxTXVfSUF5MGwyNjAydEtZME1mTERxTXZ3VUNoNnplZWZGNnJfVDY0RG5qXzNHeXA2Qy04ZFBLdzBLTlFTNzdNWEhrcFJZRlhrRHQ5dVpXTWZEYWNXSFFtU3QzdmlGaTYyUi1vSWU4OTdxTEE5azRVR01wX2pJSmF2dzdPVVZ3bURlaWdfTGx6cVVockp1bzQzYnUwemRj"
+        _ = "https://pay.expresspay.sa/auth/ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKU1V6STFOaUo5LmV5SnBZWFFpT2pFMk56UTJNelkzTWpnc0ltcDBhU0k2SWpoalltWmxPV00wTFRsak9HUXRNVEZsWkMwNE9USmtMV05sTmpVM01EVXlaVEE1TlNJc0ltVjRjQ0k2TVRZM05EWTBNRE15T0gwLkRtdTZ6STRPN1NlSHJPUFE1R0sxcHFraTdFQWlzQjlnbWFpMElSYWFVZU5rSGFtS1RyYU9Fd2hIeVo3U2NYZnZ0SDEzUThQU1FCOGZuMDFFUk42a0R2d200cF9STWNOLVhLMG1TMUJ1UHlJbmEwWG1zMEF1T1NhTzkzUXdTR1VlLWU0dGtObkxKc0ZfbzZqaUsyaHRiSVpVcGF6LU5yX1pDdzE0LWVGYlR6YnVHNXg4MlRRRlZyaUs2aDBvNHd2VGFkQnc2bERPbEVOWkhxZ1N3YmpwcHA2WW5lN0xVaFBXNUNwc2VDZEczczZvWVA1U0pscWtTY2tyTjFOUlRuTEt2Z05EMzRYNGNhb0d6NTBoakVfTmpkSk1GbXE2Vl9OclNFOWxYUVJHeVJTTGxvRHFET0E0TGR2Zk1OSDNUeWhMenJXVF9KVHo0M0dOZXByZ0ZaSG8zWmtqZkg1SGpDY2lLR0R3WTF5ZlB3OHVwN0ItZzNCb0l6OHlYajJ3emVUaWxfcGZTODIyQXRnbXY1QUszdHVhNERPU2FUMFhxZ3N6X0Faamg4endzSHZNLXg2cjVxRllvQ2E4Q05mc051Z1hRSzhPYzRsQnluM2djdU9qa0JzdnMzNkh1R2ZtRVJaYnFST3UwT0h1aERRNGFwZHpxOWY1amE1dEhpeWJTM2ZVbDhPa2FaTGZKWXVhMS1hLXFORFdxTXVfSUF5MGwyNjAydEtZME1mTERxTXZ3VUNoNnplZWZGNnJfVDY0RG5qXzNHeXA2Qy04ZFBLdzBLTlFTNzdNWEhrcFJZRlhrRHQ5dVpXTWZEYWNXSFFtU3QzdmlGaTYyUi1vSWU4OTdxTEE5azRVR01wX2pJSmF2dzdPVVZ3bURlaWdfTGx6cVVockp1bzQzYnUwemRj"
 
     }
     
@@ -48,7 +48,7 @@ class ApplePayInitiater : UIViewController{
             if let js = try? String(contentsOfFile: filepath){
                 self.webView?.evaluateJavaScript(js, completionHandler: { result, error in
                     self.webView?.evaluateJavaScript("doIt()", completionHandler: { res, err in
-                        print(res)
+                        print(res ?? "No result (res)")
                     })
                 })
             }
@@ -62,7 +62,7 @@ class ApplePayInitiater : UIViewController{
 
 extension ApplePayInitiater{
     
-    private func operationCompleted(result:ExpressPay3dsResponse){
+    private func operationCompleted(result:EdfaPg3dsResponse){
         if result.result == .success{
             self.dismiss(animated: true) {
                 self.onTransactionSuccess?(result)
@@ -74,7 +74,7 @@ extension ApplePayInitiater{
         }
     }
     
-    private func parseHttpBody(httpBody:Data) -> ExpressPay3dsResponse?{
+    private func parseHttpBody(httpBody:Data) -> EdfaPg3dsResponse?{
         var dictionary:[String:String] = [:]
         
         if let bodyString = String(data: httpBody, encoding: .utf8){
@@ -92,7 +92,7 @@ extension ApplePayInitiater{
         
         if let jsonData = try? JSONSerialization.data(withJSONObject: dictionary){
             
-            let response = try? JSONDecoder().decode(ExpressPay3dsResponse.self, from: jsonData)
+            let response = try? JSONDecoder().decode(EdfaPg3dsResponse.self, from: jsonData)
 
             return response
             
@@ -128,7 +128,7 @@ extension ApplePayInitiater : WKNavigationDelegate{
         print(webView)
         
         let url = navigationAction.request.url?.description ?? ""
-        let body = String(data: navigationAction.request.httpBody ?? Data(), encoding: .utf8)  ?? "None"
+        _ = String(data: navigationAction.request.httpBody ?? Data(), encoding: .utf8)  ?? "None"
         
         logRequest(request: navigationAction.request)
     

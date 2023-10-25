@@ -2,7 +2,7 @@
 //  Helpers.swift
 //  Sample
 //
-//  Created by ExpressPay(zik) on 10.03.2021.
+//  Created by EdfaPg(zik) on 10.03.2021.
 //
 
 import UIKit

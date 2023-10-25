@@ -1,13 +1,13 @@
 //
-//  ExpressPayRadioButton.swift
+//  EdfaPgRadioButton.swift
 //  Sample
 //
-//  Created by ExpressPay(zik) on 10.03.2021.
+//  Created by EdfaPg(zik) on 10.03.2021.
 //
 
 import UIKit
 
-final class ExpressPayRadioButton: UIButton {
+final class EdfaPayRadioButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,9 +26,9 @@ final class ExpressPayRadioButton: UIButton {
     }
 }
 
-final class ExpressPayRadioButtonContainer {
+final class EdfaPgRadioButtonContainer {
     
-    var selectedButton: ExpressPayRadioButton? {
+    var selectedButton: EdfaPayRadioButton? {
         didSet {
             if oldValue != selectedButton { didSelectButton?(selectedButton) }
         }
@@ -40,14 +40,14 @@ final class ExpressPayRadioButtonContainer {
         }
     }
     
-    var didSelectButton: ((ExpressPayRadioButton?) -> Void)?
+    var didSelectButton: ((EdfaPayRadioButton?) -> Void)?
     var didSelectIndex: ((Int?) -> Void)?
     
     var canUnselect: Bool = false
     
-    private var buttons: [ExpressPayRadioButton] = []
+    private var buttons: [EdfaPayRadioButton] = []
     
-    init(_ buttons: ExpressPayRadioButton...) {
+    init(_ buttons: EdfaPayRadioButton...) {
         self.buttons = buttons
         self.buttons.forEach { $0.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside) }
         
@@ -71,7 +71,7 @@ final class ExpressPayRadioButtonContainer {
         selectButton(buttons[index])
     }
     
-    func selectButton(_ button: ExpressPayRadioButton?) {
+    func selectButton(_ button: EdfaPayRadioButton?) {
         buttons.forEach { $0.isSelected = false }
         button?.isSelected = true
         
@@ -79,7 +79,7 @@ final class ExpressPayRadioButtonContainer {
         selectedIndex = buttons.firstIndex(where: { $0 == button })
     }
     
-    @objc private func buttonAction(_ sender: ExpressPayRadioButton) {
+    @objc private func buttonAction(_ sender: EdfaPayRadioButton) {
         if canUnselect && sender == selectedButton { selectButton(nil) }
         else { selectButton(sender) }
     }

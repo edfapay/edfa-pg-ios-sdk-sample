@@ -1,14 +1,14 @@
 //
-//  ExpressPayCreditvoidVC.swift
+//  EdfaPgCreditvoidVC.swift
 //  Sample
 //
-//  Created by ExpressPay(zik) on 10.03.2021.
+//  Created by EdfaPg(zik) on 10.03.2021.
 //
 
 import UIKit
-import ExpressPaySDK
+import EdfaPgSdk
 
-final class ExpressPayCreditvoidVC: TransactionViewController {
+final class EdfaPgCreditvoidVC: TransactionViewController {
     
     // MARK: - IBOutlets
     
@@ -16,8 +16,8 @@ final class ExpressPayCreditvoidVC: TransactionViewController {
     
     // MARK: - Private Properties
     
-    private lazy var creditvoidAdapter: ExpressPayCreditvoidAdapter = {
-        let adapter = ExpressPayAdapterFactory().createCreditvoid()
+    private lazy var creditvoidAdapter: EdfaPgCreditvoidAdapter = {
+        let adapter = EdfaPgAdapterFactory().createCreditvoid()
         adapter.delegate = self
         return adapter
     }()
@@ -39,7 +39,7 @@ final class ExpressPayCreditvoidVC: TransactionViewController {
         
         let amount = Double(tfPartialAmount.text ?? "")
         
-        let transaction = ExpressPayTransactionStorage.Transaction(payerEmail: selectedTransaction.payerEmail,
+        let transaction = EdfaPgTransactionStorage.Transaction(payerEmail: selectedTransaction.payerEmail,
                                                                   cardNumber: selectedTransaction.cardNumber)
         
         creditvoidAdapter.execute(transactionId: selectedTransaction.id,

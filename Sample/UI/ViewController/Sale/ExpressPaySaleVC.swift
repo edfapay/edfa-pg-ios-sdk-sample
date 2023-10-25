@@ -1,15 +1,15 @@
 //
-//  ExpressPaySaleVC.swift
+//  EdfaPgSaleVC.swift
 //  Sample
 //
-//  Created by ExpressPay(zik) on 10.03.2021.
+//  Created by EdfaPg(zik) on 10.03.2021.
 //
 
 import UIKit
 import Fakery
-import ExpressPaySDK
+import EdfaPgSdk
 
-final class ExpressPaySaleVC: BaseViewController {
+final class EdfaPgSaleVC: BaseViewController {
     
     // MARK: - IBOutlets
     
@@ -33,25 +33,25 @@ final class ExpressPaySaleVC: BaseViewController {
     @IBOutlet private weak var tfPayerState: UITextField!
     @IBOutlet private weak var tfPayerBirthday: UITextField!
     
-    @IBOutlet private weak var btnSuccessSaleCard: ExpressPayRadioButton!
-    @IBOutlet private weak var btnFailueSaleCard: ExpressPayRadioButton!
-    @IBOutlet private weak var btnFailureCaptureCard: ExpressPayRadioButton!
-    @IBOutlet private weak var btnSuccess3dSecureSaleCard: ExpressPayRadioButton!
-    @IBOutlet private weak var btnFailure3dSecureSaleCard: ExpressPayRadioButton!
+    @IBOutlet private weak var btnSuccessSaleCard: EdfaPayRadioButton!
+    @IBOutlet private weak var btnFailueSaleCard: EdfaPayRadioButton!
+    @IBOutlet private weak var btnFailureCaptureCard: EdfaPayRadioButton!
+    @IBOutlet private weak var btnSuccess3dSecureSaleCard: EdfaPayRadioButton!
+    @IBOutlet private weak var btnFailure3dSecureSaleCard: EdfaPayRadioButton!
     
     @IBOutlet private weak var swtInitRecurringSale: UISwitch!
     @IBOutlet private weak var tfChannelId: UITextField!
     
     // MARK: - Private Properties
     
-    private lazy var cardsContainer = ExpressPayRadioButtonContainer(btnSuccessSaleCard,
+    private lazy var cardsContainer = EdfaPgRadioButtonContainer(btnSuccessSaleCard,
                                                                     btnFailueSaleCard,
                                                                     btnFailureCaptureCard,
                                                                     btnSuccess3dSecureSaleCard,
                                                                     btnFailure3dSecureSaleCard)
     
-    private lazy var saleAdapter: ExpressPaySaleAdapter = {
-        let adapter = ExpressPayAdapterFactory().createSale()
+    private lazy var saleAdapter: EdfaPgSaleAdapter = {
+        let adapter = EdfaPgAdapterFactory().createSale()
         adapter.delegate = self
         return adapter
     }()
@@ -81,7 +81,7 @@ final class ExpressPaySaleVC: BaseViewController {
 
 // MARK: - View life cycle
 
-extension ExpressPaySaleVC {
+extension EdfaPgSaleVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -91,7 +91,7 @@ extension ExpressPaySaleVC {
 
 // MARK: - Private Methods
 
-private extension ExpressPaySaleVC {
+private extension EdfaPgSaleVC {
     func randomize(isAll: Bool) {
         tfOrderId.text = UUID().uuidString
         tfOrderAmount.text = String(format: "%.2f", Double.random(in: 0...10))
@@ -137,19 +137,19 @@ private extension ExpressPaySaleVC {
     func executeRequest(isAuth: Bool) {
         guard let selectedCardIndex = cardsContainer.selectedIndex else { return }
         
-        let order = ExpressPaySaleOrder(id: tfOrderId.text ?? "",
+        let order = EdfaPgSaleOrder(id: tfOrderId.text ?? "",
                                        amount: Double(tfOrderAmount.text ?? "") ?? 0,
                                        currency: tfOrderCurrencyCode.text ?? "",
                                        description: tfOrderDescription.text ?? "")
         
         let card = getCard(at: selectedCardIndex)
         
-        let payerOptions = ExpressPayPayerOptions(middleName: tfPayerMiddleName.text,
+        let payerOptions = EdfaPgPayerOptions(middleName: tfPayerMiddleName.text,
                                                  birthdate: Foundation.Date.formatter.date(from: tfPayerBirthday.text ?? ""),
                                                  address2: tfPayerAddress2.text,
                                                  state: tfPayerState.text)
         
-        let payer = ExpressPayPayer(firstName: tfPayerFirstName.text ?? "",
+        let payer = EdfaPgPayer(firstName: tfPayerFirstName.text ?? "",
                                    lastName: tfPayerLastName.text ?? "",
                                    address: tfPayerAddress.text ?? "",
                                    country: tfPayerCountryCode.text ?? "",
@@ -160,10 +160,10 @@ private extension ExpressPaySaleVC {
                                    ip: tfPayerIpAddress.text ?? "",
                                    options: payerOptions)
         
-        let saleOptions = ExpressPaySaleOptions(channelId: tfChannelId.text,
+        let saleOptions = EdfaPgSaleOptions(channelId: tfChannelId.text,
                                                recurringInit: swtInitRecurringSale.isOn)
         
-        let transaction = ExpressPayTransactionStorage.Transaction(payerEmail: payer.email,
+        let transaction = EdfaPgTransactionStorage.Transaction(payerEmail: payer.email,
                                                                   cardNumber: card.number)
         
         let termUrl3ds = "https://webhook.site/85cedd75-7a4b-42d7-a03f-a48683ea17c4"
@@ -206,7 +206,7 @@ private extension ExpressPaySaleVC {
         }
     }
     
-    func redirect(response:ExpressPaySaleRedirect){
+    func redirect(response:EdfaPgSaleRedirect){
         
         SaleRedirectionView()
             .setup(response: response, onTransactionSuccess: { result in
@@ -229,13 +229,13 @@ private extension ExpressPaySaleVC {
     }
     
     
-    func getCard(at index: Int) -> ExpressPayCard {
+    func getCard(at index: Int) -> EdfaPgCard {
         switch index {
-        case 1: return ExpressPayTestCard.saleFailure
-        case 2: return ExpressPayTestCard.captureFailure
-        case 3: return ExpressPayTestCard.secure3dSuccess
-        case 4: return ExpressPayTestCard.secure3dFailure
-        default: return ExpressPayTestCard.saleSuccess
+        case 1: return EdfaPgTestCard.saleFailure
+        case 2: return EdfaPgTestCard.captureFailure
+        case 3: return EdfaPgTestCard.secure3dSuccess
+        case 4: return EdfaPgTestCard.secure3dFailure
+        default: return EdfaPgTestCard.saleSuccess
         }
     }
 }

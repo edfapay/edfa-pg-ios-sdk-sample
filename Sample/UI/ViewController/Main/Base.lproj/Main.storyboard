@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0df-7z-ov1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0df-7z-ov1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ExpressPaySDK Sample-->
+        <!--EdfaPgSdk Sample-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,56 +21,56 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bPI-up-yau">
                                 <rect key="frame" x="16" y="300" width="382" height="296"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQU-7j-rOC" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQU-7j-rOC" customClass="EdfaPayButton" customModule="Sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
                                         <state key="normal" title="SALE"/>
                                         <connections>
                                             <segue destination="NHk-AJ-O1X" kind="show" id="cJF-QG-TzS"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApO-GY-eeJ" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApO-GY-eeJ" customClass="EdfaPayButton" customModule="Sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="38" width="382" height="30"/>
                                         <state key="normal" title="RECURRING_SALE"/>
                                         <connections>
                                             <segue destination="aQv-sJ-Xve" kind="show" id="uNm-rH-52C"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsc-k3-wAB" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsc-k3-wAB" customClass="EdfaPayButton" customModule="Sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="76" width="382" height="30"/>
                                         <state key="normal" title="CAPTURE"/>
                                         <connections>
                                             <segue destination="sMK-Rz-Y9Z" kind="show" id="RC8-zL-HqK"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1N-T5-lSb" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1N-T5-lSb" customClass="EdfaPayButton" customModule="Sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="114" width="382" height="30"/>
                                         <state key="normal" title="CREDITVOID"/>
                                         <connections>
                                             <segue destination="2LO-qE-9fH" kind="show" id="mla-lW-teY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnw-co-1yL" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnw-co-1yL" customClass="EdfaPayButton" customModule="Sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="152" width="382" height="30"/>
                                         <state key="normal" title="GET_TRANS_STATUS"/>
                                         <connections>
                                             <segue destination="MJV-p3-HwJ" kind="show" id="GZg-sj-cYv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baf-oa-oxC" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baf-oa-oxC" customClass="EdfaPayButton" customModule="Sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="190" width="382" height="30"/>
                                         <state key="normal" title="GET_TRANS_DETAILS"/>
                                         <connections>
                                             <segue destination="MhT-Yo-U0k" kind="show" id="oOJ-lq-gno"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6Q-w2-OiH" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6Q-w2-OiH" customClass="EdfaPayButton" customModule="Sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="228" width="382" height="30"/>
                                         <state key="normal" title="SALE_WITH_CARD_UI"/>
                                         <connections>
                                             <action selector="btnPayWithCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZX-SI-hQb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdb-Hd-H2h" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdb-Hd-H2h" customClass="EdfaPayButton" customModule="Sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="266" width="382" height="30"/>
                                         <state key="normal" title="APPLE_PAY"/>
                                         <connections>
@@ -88,66 +88,66 @@
                             <constraint firstItem="bPI-up-yau" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pqC-Fq-HMW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ExpressPaySDK Sample" id="3Ts-or-2yA"/>
+                    <navigationItem key="navigationItem" title="EdfaPgSdk Sample" id="3Ts-or-2yA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="926.08695652173924" y="103.79464285714285"/>
         </scene>
-        <!--ExpressPaySale-->
+        <!--EdfaPgSale-->
         <scene sceneID="pGs-pz-lce">
             <objects>
-                <viewControllerPlaceholder storyboardName="ExpressPaySale" id="NHk-AJ-O1X" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="EdfaPgSale" id="NHk-AJ-O1X" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Cfe-vf-DGg"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6n-D6-lTS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1663" y="-52"/>
         </scene>
-        <!--ExpressPayRecurringSale-->
+        <!--EdfaPgRecurringSale-->
         <scene sceneID="NgP-Oe-mNC">
             <objects>
-                <viewControllerPlaceholder storyboardName="ExpressPayRecurringSale" id="aQv-sJ-Xve" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="EdfaPgRecurringSale" id="aQv-sJ-Xve" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="0F5-H0-ewv"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxN-hZ-XSH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1706" y="5"/>
         </scene>
-        <!--ExpressPayCapture-->
+        <!--EdfaPgCapture-->
         <scene sceneID="ZeU-Lo-9U2">
             <objects>
-                <viewControllerPlaceholder storyboardName="ExpressPayCapture" id="sMK-Rz-Y9Z" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="EdfaPgCapture" id="sMK-Rz-Y9Z" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="E0a-sB-AfB"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETe-Rb-PYv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1679" y="66"/>
         </scene>
-        <!--ExpressPayCreditvoid-->
+        <!--EdfaPgCreditvoid-->
         <scene sceneID="a9R-rL-ADq">
             <objects>
-                <viewControllerPlaceholder storyboardName="ExpressPayCreditvoid" id="2LO-qE-9fH" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="EdfaPgCreditvoid" id="2LO-qE-9fH" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="vLh-yZ-5IT"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXY-GH-bR5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1690" y="132"/>
         </scene>
-        <!--ExpressPayGetTransStatus-->
+        <!--EdfaPgGetTransStatus-->
         <scene sceneID="f8e-6w-eSC">
             <objects>
-                <viewControllerPlaceholder storyboardName="ExpressPayGetTransStatus" id="MJV-p3-HwJ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="EdfaPgGetTransStatus" id="MJV-p3-HwJ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="jm9-da-6mv"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="otN-tR-gf6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1712" y="196"/>
         </scene>
-        <!--ExpressPayGetTransDetails-->
+        <!--EdfaPgGetTransDetails-->
         <scene sceneID="iXG-1J-OXp">
             <objects>
-                <viewControllerPlaceholder storyboardName="ExpressPayGetTransDetails" id="MhT-Yo-U0k" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="EdfaPgGetTransDetails" id="MhT-Yo-U0k" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Yrm-gu-sBQ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="olK-2q-R5c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -184,6 +184,7 @@
             <point key="canvasLocation" x="1633" y="314"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.41176470590000003" green="0.8862745098" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <namedColor name="Orange">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

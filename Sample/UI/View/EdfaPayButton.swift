@@ -1,13 +1,13 @@
 //
-//  ExpressPayButton.swift
+//  EdfaPgButton.swift
 //  Sample
 //
-//  Created by ExpressPay(zik) on 10.03.2021.
+//  Created by EdfaPg(zik) on 10.03.2021.
 //
 
 import UIKit
 
-final class ExpressPayButton: UIButton {
+final class EdfaPayButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,7 +22,7 @@ final class ExpressPayButton: UIButton {
     }
     
     private func setup() {
-        backgroundColor = .blue
+        backgroundColor = UIColor(named: "primary") // 69E2A5
         contentEdgeInsets = .init(top: 13, left: 13, bottom: 13, right: 13)
         layer.cornerRadius = 8
         

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ExpressPaySDKSamples.xcodeproj">
+      location = "group:/Volumes/Data/Projects/Edfapay/iOS/edfa-pg-ios-sdk-sample/EdfaPaymentGatewaySample.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

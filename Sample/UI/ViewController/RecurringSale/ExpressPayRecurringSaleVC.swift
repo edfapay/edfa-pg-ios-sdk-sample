@@ -1,14 +1,14 @@
 //
-//  ExpressPayRecurringSaleVC.swift
+//  EdfaPgRecurringSaleVC.swift
 //  Sample
 //
-//  Created by ExpressPay(zik) on 10.03.2021.
+//  Created by EdfaPg(zik) on 10.03.2021.
 //
 
 import UIKit
-import ExpressPaySDK
+import EdfaPgSdk
 
-final class ExpressPayRecurringSaleVC: TransactionViewController {
+final class EdfaPgRecurringSaleVC: TransactionViewController {
     
     // MARK: - IBOutlets
     
@@ -19,13 +19,13 @@ final class ExpressPayRecurringSaleVC: TransactionViewController {
     @IBOutlet weak var tfOrderAmount: UITextField!
     @IBOutlet weak var tfOrderDescription: UITextField!
     
-    @IBOutlet weak var btnAuth: ExpressPayButton!
-    @IBOutlet weak var btnSale: ExpressPayButton!
+    @IBOutlet weak var btnAuth: EdfaPayButton!
+    @IBOutlet weak var btnSale: EdfaPayButton!
     
     // MARK: - Private Properties
     
-    private lazy var recurringSaleAdapter: ExpressPayRecurringSaleAdapter = {
-        let adapter = ExpressPayAdapterFactory().createRecurringSale()
+    private lazy var recurringSaleAdapter: EdfaPgRecurringSaleAdapter = {
+        let adapter = EdfaPgAdapterFactory().createRecurringSale()
         adapter.delegate = self
         return adapter
     }()
@@ -54,7 +54,7 @@ final class ExpressPayRecurringSaleVC: TransactionViewController {
     
     // MARK: - Private Methods
     
-    override func setTansaction(_ transaction: ExpressPayTransactionStorage.Transaction?) {
+    override func setTansaction(_ transaction: EdfaPgTransactionStorage.Transaction?) {
         super.setTansaction(transaction)
         
         btnAuth.isEnabled = selectedTransaction != nil
@@ -69,14 +69,14 @@ final class ExpressPayRecurringSaleVC: TransactionViewController {
         
         let amount = Double(tfOrderAmount.text ?? "") ?? 0
         
-        let order = ExpressPayOrder(id: tfOrderId.text ?? "",
+        let order = EdfaPgOrder(id: tfOrderId.text ?? "",
                                    amount: amount,
                                    description: tfOrderDescription.text ?? "")
         
-        let recurringOptions = ExpressPayRecurringOptions(firstTransactionId: tfRecurringFirstTransId.text ?? "",
+        let recurringOptions = EdfaPgRecurringOptions(firstTransactionId: tfRecurringFirstTransId.text ?? "",
                                                          token: tfRecurringToken.text ?? "")
         
-        let transaction = ExpressPayTransactionStorage.Transaction(payerEmail: selectedTransaction.payerEmail,
+        let transaction = EdfaPgTransactionStorage.Transaction(payerEmail: selectedTransaction.payerEmail,
                                                                   cardNumber: selectedTransaction.cardNumber)
         
         recurringSaleAdapter.execute(order: order,

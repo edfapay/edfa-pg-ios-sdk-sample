@@ -2,19 +2,19 @@
 //  TransactionViewController.swift
 //  Sample
 //
-//  Created by ExpressPay(zik) on 11.03.2021.
+//  Created by EdfaPg(zik) on 11.03.2021.
 //
 
 import UIKit
 
 class TransactionViewController: BaseViewController {
     
-    @IBOutlet var btnSelectTransaction: ExpressPayButton!
-    @IBOutlet var btnLoadAll: ExpressPayButton?
+    @IBOutlet var btnSelectTransaction: EdfaPayButton!
+    @IBOutlet var btnLoadAll: EdfaPayButton?
     @IBOutlet var lbSelectedTransaction: UILabel!
     
-    private(set) var selectedTransaction: ExpressPayTransactionStorage.Transaction?
-    var transactions: [ExpressPayTransactionStorage.Transaction] = [] {
+    private(set) var selectedTransaction: EdfaPgTransactionStorage.Transaction?
+    var transactions: [EdfaPgTransactionStorage.Transaction] = [] {
         didSet {
             setTansaction(nil)
             btnSelectTransaction.isEnabled = !transactions.isEmpty
@@ -41,13 +41,13 @@ class TransactionViewController: BaseViewController {
     }
     
     @objc func selectTransaction() {
-        let chooserVC = ExpressPayChooserVC<ExpressPayTransactionStorage.Transaction>()
+        let chooserVC = EdfaPgChooserVC<EdfaPgTransactionStorage.Transaction>()
         chooserVC.data = transactions
         chooserVC.completion = { [unowned self] in self.setTansaction($0) }
         present(chooserVC, animated: true, completion: nil)
     }
     
-    func setTansaction(_ transaction: ExpressPayTransactionStorage.Transaction?) {
+    func setTansaction(_ transaction: EdfaPgTransactionStorage.Transaction?) {
         selectedTransaction = transaction
         
         if let transaction = transaction,

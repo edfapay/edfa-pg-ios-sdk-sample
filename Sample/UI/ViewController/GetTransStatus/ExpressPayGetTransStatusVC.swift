@@ -1,19 +1,19 @@
 //
-//  ExpressPayGetTransStatusVC.swift
+//  EdfaPgGetTransStatusVC.swift
 //  Sample
 //
-//  Created by ExpressPay(zik) on 10.03.2021.
+//  Created by EdfaPg(zik) on 10.03.2021.
 //
 
 import UIKit
-import ExpressPaySDK
+import EdfaPgSdk
 
-final class ExpressPayGetTransStatusVC: TransactionViewController {
+final class EdfaPgGetTransStatusVC: TransactionViewController {
     
     // MARK: - Private Properties
     
-    private lazy var getTransactionStatusAdapter: ExpressPayGetTransactionStatusAdapter = {
-        let adapter = ExpressPayAdapterFactory().createGetTransactionStatus()
+    private lazy var getTransactionStatusAdapter: EdfaPgGetTransactionStatusAdapter = {
+        let adapter = EdfaPgAdapterFactory().createGetTransactionStatus()
         adapter.delegate = self
         return adapter
     }()
@@ -38,7 +38,7 @@ final class ExpressPayGetTransStatusVC: TransactionViewController {
 
 // MARK: - View life cycle
 
-extension ExpressPayGetTransStatusVC {
+extension EdfaPgGetTransStatusVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         

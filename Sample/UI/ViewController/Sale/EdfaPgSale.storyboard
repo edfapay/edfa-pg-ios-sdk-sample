@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P8u-m9-osh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P8u-m9-osh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,7 +13,7 @@
         <!--Sale-->
         <scene sceneID="Y9f-WL-6n9">
             <objects>
-                <viewController id="P8u-m9-osh" customClass="ExpressPaySaleVC" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="P8u-m9-osh" customClass="EdfaPgSaleVC" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TE5-EH-GJI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="huC-mp-qP1">
                                                 <rect key="frame" x="16" y="16" width="382" height="1751.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxJ-vr-Iwk" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxJ-vr-Iwk" customClass="EdfaPayButton" customModule="Sample" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
                                                         <state key="normal" title="Clear Transaction"/>
                                                         <connections>
@@ -37,14 +37,14 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ghY-IV-DeU">
                                                         <rect key="frame" x="0.0" y="62" width="382" height="68"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fk-Nd-nqG" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fk-Nd-nqG" customClass="EdfaPayButton" customModule="Sample" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
                                                                 <state key="normal" title="Randomize Required"/>
                                                                 <connections>
                                                                     <action selector="randomizeRequairedAction" destination="P8u-m9-osh" eventType="touchUpInside" id="P01-mz-kyu"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jk-OT-IMZ" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jk-OT-IMZ" customClass="EdfaPayButton" customModule="Sample" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="38" width="382" height="30"/>
                                                                 <state key="normal" title="Randomize All"/>
                                                                 <connections>
@@ -198,23 +198,23 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8Lr-5N-kpL">
                                                                 <rect key="frame" x="0.0" y="36.5" width="382" height="166"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wo4-DG-WHs" customClass="ExpressPayRadioButton" customModule="Sample" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wo4-DG-WHs" customClass="EdfaPayRadioButton" customModule="Sample" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
                                                                         <state key="normal" title="Success Sale Card"/>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3O-6z-KkJ" customClass="ExpressPayRadioButton" customModule="Sample" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3O-6z-KkJ" customClass="EdfaPayRadioButton" customModule="Sample" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="34" width="382" height="30"/>
                                                                         <state key="normal" title="Failure Sale Card"/>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kev-Dh-17g" customClass="ExpressPayRadioButton" customModule="Sample" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kev-Dh-17g" customClass="EdfaPayRadioButton" customModule="Sample" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="68" width="382" height="30"/>
                                                                         <state key="normal" title="Failure Capture Card"/>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ki-3D-MDa" customClass="ExpressPayRadioButton" customModule="Sample" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ki-3D-MDa" customClass="EdfaPayRadioButton" customModule="Sample" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="102" width="382" height="30"/>
                                                                         <state key="normal" title="Success 3DSecure Sale Card"/>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ic-4r-KpT" customClass="ExpressPayRadioButton" customModule="Sample" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ic-4r-KpT" customClass="EdfaPayRadioButton" customModule="Sample" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="136" width="382" height="30"/>
                                                                         <state key="normal" title="Failure 3DSecure Sale Card"/>
                                                                     </button>
@@ -269,14 +269,14 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sQx-xv-gqh">
                                                                 <rect key="frame" x="0.0" y="36.5" width="382" height="30"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AM9-Q8-tkF" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AM9-Q8-tkF" customClass="EdfaPayButton" customModule="Sample" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="187" height="30"/>
                                                                         <state key="normal" title="Auth"/>
                                                                         <connections>
                                                                             <action selector="authRequestAction" destination="P8u-m9-osh" eventType="touchUpInside" id="M3T-8m-xHk"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4j-JP-FrO" customClass="ExpressPayButton" customModule="Sample" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4j-JP-FrO" customClass="EdfaPayButton" customModule="Sample" customModuleProvider="target">
                                                                         <rect key="frame" x="195" y="0.0" width="187" height="30"/>
                                                                         <state key="normal" title="Sale"/>
                                                                         <connections>
@@ -386,9 +386,10 @@
             <point key="canvasLocation" x="1804" y="-591"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.41176470590000003" green="0.8862745098" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <namedColor name="Orange">
-            <color red="0.92549019607843142" green="0.30980392156862746" blue="0.22352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

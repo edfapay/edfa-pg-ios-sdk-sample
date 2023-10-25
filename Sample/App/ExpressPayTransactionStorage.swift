@@ -1,16 +1,16 @@
 //
-//  ExpressPayTransactionStorage.swift
+//  EdfaPgTransactionStorage.swift
 //  Sample
 //
-//  Created by ExpressPay(zik) on 10.03.2021.
+//  Created by EdfaPg(zik) on 10.03.2021.
 //
 
 import Foundation
-import ExpressPaySDK
+import EdfaPgSdk
 
-internal class ExpressPayTransactionStorage {
+internal class EdfaPgTransactionStorage {
 
-    private let storageKey = "expressPayTransactionStorage"
+    private let storageKey = "EdfaPgTransactionStorage"
     private let storage = UserDefaults.standard
 
     func addTransaction(_ transaction: Transaction) {
@@ -47,15 +47,15 @@ internal class ExpressPayTransactionStorage {
 
 // MARK: - Transaction
 
-extension ExpressPayTransactionStorage {
+extension EdfaPgTransactionStorage {
     final class Transaction: CustomStringConvertible, Codable {
         let payerEmail: String
         let cardNumber: String
         
         var id: String = ""
-        var action: ExpressPayAction?
-        var result: ExpressPayResult?
-        var status: ExpressPayStatus?
+        var action: EdfaPgAction?
+        var result: EdfaPgResult?
+        var status: EdfaPgStatus?
         
         var recurringToken: String = ""
         var isAuth: Bool = false
@@ -87,7 +87,7 @@ extension ExpressPayTransactionStorage {
             self.cardNumber = cardNumber
         }
         
-        func fill(result: ExpressPayResultProtocol) {
+        func fill(result: EdfaPgResultProtocol) {
             id = result.transactionId
             action = result.action
             self.result = result.result

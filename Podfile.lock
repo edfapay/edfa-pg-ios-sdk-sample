@@ -1,16 +1,16 @@
 PODS:
-  - ExpressPaySDK (1.1.1)
+  - EdfaPgSdk (0.0.1)
 
 DEPENDENCIES:
-  - ExpressPaySDK
+  - EdfaPgSdk (from `../edfapay-pg-ios-sdk-pod.git`)
 
-SPEC REPOS:
-  trunk:
-    - ExpressPaySDK
+EXTERNAL SOURCES:
+  EdfaPgSdk:
+    :path: "../edfapay-pg-ios-sdk-pod.git"
 
 SPEC CHECKSUMS:
-  ExpressPaySDK: e032f322a927b94ae64f1993ae669fd1df13ef13
+  EdfaPgSdk: 481f4516dc0e6173f42b4beaa405e3aed31c6897
 
-PODFILE CHECKSUM: 0e89a2bcb142341505e9e0fd69d3bdd9195605d3
+PODFILE CHECKSUM: 715cf336c153c1d841e18bca4d23475d8bf7ae2d
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.13.0

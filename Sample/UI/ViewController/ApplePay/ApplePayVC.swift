@@ -1,13 +1,13 @@
 //
-//  ExpressPaySaleVC.swift
+//  EdfaPgSaleVC.swift
 //  Sample
 //
-//  Created by ExpressPay(zik) on 10.03.2021.
+//  Created by EdfaPg(zik) on 10.03.2021.
 //
 
 import UIKit
 import Fakery
-import ExpressPaySDK
+import EdfaPgSdk
 import PassKit
 
 final class ApplePayVC: BaseViewController {
@@ -35,8 +35,8 @@ final class ApplePayVC: BaseViewController {
     @IBOutlet private weak var tfPayerBirthday: UITextField!
 
     
-    private lazy var saleAdapter: ExpressPaySaleAdapter = {
-        let adapter = ExpressPayAdapterFactory().createSale()
+    private lazy var saleAdapter: EdfaPgSaleAdapter = {
+        let adapter = EdfaPgAdapterFactory().createSale()
         adapter.delegate = self
         return adapter
     }()
@@ -111,18 +111,18 @@ private extension ApplePayVC {
         
         
         
-        let order = ExpressPaySaleOrder(id: tfOrderId.text ?? "",
+        let order = EdfaPgSaleOrder(id: tfOrderId.text ?? "",
                                        amount: Double(tfOrderAmount.text ?? "") ?? 0,
                                        currency: tfOrderCurrencyCode.text ?? "",
                                        description: tfOrderDescription.text ?? "")
         
         
-        let payerOptions = ExpressPayPayerOptions(middleName: tfPayerMiddleName.text,
+        let payerOptions = EdfaPgPayerOptions(middleName: tfPayerMiddleName.text,
                                                  birthdate: Foundation.Date.formatter.date(from: tfPayerBirthday.text ?? ""),
                                                  address2: tfPayerAddress2.text,
                                                  state: tfPayerState.text)
         
-        let payer = ExpressPayPayer(firstName: tfPayerFirstName.text ?? "",
+        let payer = EdfaPgPayer(firstName: tfPayerFirstName.text ?? "",
                                    lastName: tfPayerLastName.text ?? "",
                                    address: tfPayerAddress.text ?? "",
                                    country: tfPayerCountryCode.text ?? "",
@@ -133,17 +133,17 @@ private extension ApplePayVC {
                                    ip: tfPayerIpAddress.text ?? "",
                                    options: payerOptions)
         
-        ExpressApplePay()
+        EdfaApplePay()
             .set(order: order)
             .set(payer: payer)
-            .set(applePayMerchantID: EXPRESS_APPLEPAY_MERCHANT_ID)
+            .set(applePayMerchantID: EDFA_PG_APPLEPAY_MERCHANT_ID)
             .enable(logs: true)
             .on(authentication: { auth in
                 debugPrint("onAuthentication: \(String(data: auth.token.paymentData, encoding: .utf8)!)")
             }).on(transactionFailure: { res in
                 debugPrint(res)
             }).on(transactionSuccess: { res in
-                debugPrint(res)
+                debugPrint(res ?? "No result (res)")
             }).initialize(
                 target: self,
                 onError: { errors in

@@ -2,12 +2,12 @@
 //  BaseViewController.swift
 //  Sample
 //
-//  Created by ExpressPay(zik) on 10.03.2021.
+//  Created by EdfaPg(zik) on 10.03.2021.
 //
 
 import UIKit
 import Fakery
-import ExpressPaySDK
+import EdfaPgSdk
 
 class BaseViewController: UIViewController {
     
@@ -21,7 +21,7 @@ class BaseViewController: UIViewController {
     // MARK: - Properties
     
     lazy var faker = Faker()
-    lazy var transactionStorage = ExpressPayTransactionStorage()
+    lazy var transactionStorage = EdfaPgTransactionStorage()
     
     // MARK: - View life cycle
     
@@ -44,7 +44,7 @@ class BaseViewController: UIViewController {
                          termUrl3Ds: String,
                          redirectUrl: String,
                          paymentRequisites: String) {
-        let redirect3DsVC = ExpressPayRedirect3dsVC(termUrl: termUrl,
+        let redirect3DsVC = EdfaPgRedirect3dsVC(termUrl: termUrl,
                                                    termUrl3Ds: termUrl3Ds,
                                                    redirectUrl: redirectUrl,
                                                    paymentRequisites: paymentRequisites)
@@ -80,14 +80,14 @@ class BaseViewController: UIViewController {
     }
 }
 
-// MARK: - ExpressPayResponseDelegate
+// MARK: - EdfaPgResponseDelegate
 
-extension BaseViewController: ExpressPayAdapterDelegate {
-    func willSendRequest(_ request: ExpressPayDataRequest) {
+extension BaseViewController: EdfaPgAdapterDelegate {
+    func willSendRequest(_ request: EdfaPgDataRequest) {
         loader.startAnimating()
     }
     
-    func didReceiveResponse(_ reponse: ExpressPayDataResponse?) {
+    func didReceiveResponse(_ reponse: EdfaPgDataResponse?) {
         if let data = reponse?.data,
               let dict = try? JSONSerialization.jsonObject(with: data, options: .allowFragments),
               let dictData = try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted) {

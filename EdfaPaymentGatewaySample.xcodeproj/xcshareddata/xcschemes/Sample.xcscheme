@@ -17,7 +17,7 @@
                BlueprintIdentifier = "1197845925F91A2A00DB4EC7"
                BuildableName = "Sample.app"
                BlueprintName = "Sample"
-               ReferencedContainer = "container:ExpressPaySDKSamples.xcodeproj">
+               ReferencedContainer = "container:EdfaPaymentGatewaySample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "1197845925F91A2A00DB4EC7"
             BuildableName = "Sample.app"
             BlueprintName = "Sample"
-            ReferencedContainer = "container:ExpressPaySDKSamples.xcodeproj">
+            ReferencedContainer = "container:EdfaPaymentGatewaySample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "1197845925F91A2A00DB4EC7"
             BuildableName = "Sample.app"
             BlueprintName = "Sample"
-            ReferencedContainer = "container:ExpressPaySDKSamples.xcodeproj">
+            ReferencedContainer = "container:EdfaPaymentGatewaySample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

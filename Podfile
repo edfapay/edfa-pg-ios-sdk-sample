@@ -6,9 +6,9 @@ target 'Sample' do
   use_frameworks!
 
   # Pods for Sample
-  pod 'ExpressPaySDK' ## From POD
-#  pod 'ExpressPaySDK', :git => 'https://github.com/ExpresspaySa/expresspay-ios-sdk-pod.git', :branch => 'main' ## From Repo
-#  pod 'ExpressPaySDK', :path => '../expresspay-ios-sdk-pod' ## Local
+#  pod 'EdfaPgSdk' ## From POD
+#  pod 'EdfaPgSdk', :git => 'https://github.com/edfapay/edfa-pg-ios-sdk-pod.git', :branch => 'main' ## From Repo
+  pod 'EdfaPgSdk', :path => '../edfapay-pg-ios-sdk-pod.git' ## Local
   
 
 end

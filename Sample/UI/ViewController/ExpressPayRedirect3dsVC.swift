@@ -1,14 +1,14 @@
 //
-//  ExpressPayRedirect3dsVC.swift
+//  EdfaPgRedirect3dsVC.swift
 //  Sample
 //
-//  Created by ExpressPay(zik) on 10.03.2021.
+//  Created by EdfaPg(zik) on 10.03.2021.
 //
 
 import UIKit
 import WebKit
 
-final class ExpressPayRedirect3dsVC: UIViewController {
+final class EdfaPgRedirect3dsVC: UIViewController {
     
     var termUrl: String
     var termUrl3Ds: String
@@ -81,7 +81,7 @@ final class ExpressPayRedirect3dsVC: UIViewController {
     }
 }
 
-extension ExpressPayRedirect3dsVC: WKNavigationDelegate {
+extension EdfaPgRedirect3dsVC: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         guard navigationAction.request.url?.absoluteString == termUrl3Ds else {

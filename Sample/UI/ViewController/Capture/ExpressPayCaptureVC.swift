@@ -1,14 +1,14 @@
 //
-//  ExpressPayCaptureVC.swift
+//  EdfaPgCaptureVC.swift
 //  Sample
 //
-//  Created by ExpressPay(zik) on 10.03.2021.
+//  Created by EdfaPg(zik) on 10.03.2021.
 //
 
 import UIKit
-import ExpressPaySDK
+import EdfaPgSdk
 
-final class ExpressPayCaptureVC: TransactionViewController {
+final class EdfaPgCaptureVC: TransactionViewController {
     
     // MARK: - IBOutlets
     
@@ -16,8 +16,8 @@ final class ExpressPayCaptureVC: TransactionViewController {
     
     // MARK: - Private Properties
     
-    private lazy var catpureAdapter: ExpressPayCaptureAdapter = {
-        let adapter = ExpressPayAdapterFactory().createCapture()
+    private lazy var catpureAdapter: EdfaPgCaptureAdapter = {
+        let adapter = EdfaPgAdapterFactory().createCapture()
         adapter.delegate = self
         return adapter
     }()
@@ -39,7 +39,7 @@ final class ExpressPayCaptureVC: TransactionViewController {
         
         let amount = Double(tfPartialAmount.text ?? "")
         
-        let transaction = ExpressPayTransactionStorage.Transaction(payerEmail: selectedTransaction.payerEmail,
+        let transaction = EdfaPgTransactionStorage.Transaction(payerEmail: selectedTransaction.payerEmail,
                                                                   cardNumber: selectedTransaction.cardNumber)
 
         catpureAdapter.execute(transactionId: selectedTransaction.id,
