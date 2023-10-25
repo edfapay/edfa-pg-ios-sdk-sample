@@ -1,16 +1,16 @@
 PODS:
-  - EdfaPgSdk (0.0.1)
+  - EdfaPgSdk (0.0.2)
 
 DEPENDENCIES:
-  - EdfaPgSdk (from `../edfapay-pg-ios-sdk-pod.git`)
+  - EdfaPgSdk (~> 0.0.2)
 
-EXTERNAL SOURCES:
-  EdfaPgSdk:
-    :path: "../edfapay-pg-ios-sdk-pod.git"
+SPEC REPOS:
+  trunk:
+    - EdfaPgSdk
 
 SPEC CHECKSUMS:
-  EdfaPgSdk: 481f4516dc0e6173f42b4beaa405e3aed31c6897
+  EdfaPgSdk: 21bed0152aa51dc46c2413fb42b23650587c5f12
 
-PODFILE CHECKSUM: 715cf336c153c1d841e18bca4d23475d8bf7ae2d
+PODFILE CHECKSUM: 0f9bd543fa9722018cc516397083a38d5a5fae3c
 
 COCOAPODS: 1.13.0

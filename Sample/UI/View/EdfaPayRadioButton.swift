@@ -22,7 +22,7 @@ final class EdfaPayRadioButton: UIButton {
     }
     
     private func setup() {
-        tintColor = .blue
+        tintColor = UIColor.init(named: "primary")
     }
 }
 
