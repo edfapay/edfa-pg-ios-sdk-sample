@@ -32,13 +32,13 @@ Always download latest version by run `pod update` or `pod install --repo-update
 
 ## Sample
 
-| Sale | Recurring Sale | Capture |
-|-|-|-|
-| ![](/media/sale.png) | ![](/media/recurring-sale.png) | ![](/media/capture.png) |
+| Txn Types | Card Pay | Sale | Recurring Sale |
+|-|-|-|-|
+| ![](/media/main_page.png) | ![](/media/pay_card.png) | ![](/media/sale.png) | ![](/media/recurring-sale.png) |
 
-| Creditvoid | Get Trans Status | Get Trans Details |
-|-|-|-|
-| ![](/media/creditvoid.png) | ![](/media/get-trans-status.png) | ![](/media/get-trans-details.png) |
+| Capture | Creditvoid | Get Trans Status | Get Trans Details |
+|-|-|-|-|
+| ![](/media/capture.png) | ![](/media/creditvoid.png) | ![](/media/get-trans-status.png) | ![](/media/get-trans-details.png) |
 
 ## Getting help
 
