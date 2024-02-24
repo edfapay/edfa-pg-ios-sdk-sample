@@ -143,7 +143,7 @@ private extension ApplePayVC {
             }).on(transactionFailure: { res in
                 debugPrint(res)
             }).on(transactionSuccess: { res in
-                debugPrint(res ?? "No result (res)")
+                debugPrint(res ?? "onSuccess \(res)")
             }).initialize(
                 target: self,
                 onError: { errors in
