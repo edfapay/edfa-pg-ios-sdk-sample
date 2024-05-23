@@ -6,9 +6,9 @@ target 'Sample' do
   use_frameworks!
 
   # Pods for Sample
-#  pod 'EdfaPgSdk', '~> 1.0.1' ## From POD
+  pod 'EdfaPgSdk', '~> 1.0.2' ## From POD
 #  pod 'EdfaPgSdk', :git => 'https://github.com/edfapay/edfa-pg-ios-sdk-pod.git', :branch => 'main' ## From Repo
-  pod 'EdfaPgSdk', :path => '../edfa-pg-ios-sdk-pod' ## Local
+#  pod 'EdfaPgSdk', :path => '../edfa-pg-ios-sdk-pod' ## Local
   
 
 end
