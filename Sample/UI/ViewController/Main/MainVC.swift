@@ -39,7 +39,7 @@ final class MainVC: UIViewController {
         
         let order = EdfaPgSaleOrder(
             id: UUID().uuidString,
-            amount: 0.01,
+            amount: 1.00,
             currency: "SAR",
             description: "Test Order"
         )
