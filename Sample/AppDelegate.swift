@@ -29,9 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // https://github.com/yassram/YRPayment
         let edfaPgCredential = EdfaPgCredential(
-            clientKey: EDFA_PG_MERCHANT_KEY,
-            clientPass: EDFA_PG_MERCHANT_PASSWORD,
-            paymentUrl: EDFA_PG_PAYMENT_URL
+            clientKey: MERCHANT_KEY,
+            clientPass: MERCHANT_PASSWORD,
+            paymentUrl: PAYMENT_URL
         )
         
         EdfaPgSdk.config(edfaPgCredential)

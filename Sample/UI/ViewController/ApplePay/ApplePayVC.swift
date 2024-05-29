@@ -136,7 +136,7 @@ private extension ApplePayVC {
         EdfaApplePay()
             .set(order: order)
             .set(payer: payer)
-            .set(applePayMerchantID: EDFA_PG_APPLEPAY_MERCHANT_ID)
+            .set(applePayMerchantID: APPLEPAY_MERCHANT_ID)
             .enable(logs: true)
             .on(authentication: { auth in
                 debugPrint("onAuthentication: \(String(data: auth.token.paymentData, encoding: .utf8)!)")
