@@ -2,15 +2,15 @@ PODS:
   - EdfaPgSdk (1.0.4)
 
 DEPENDENCIES:
-  - EdfaPgSdk (from `../edfa-pg-ios-sdk-pod`)
+  - EdfaPgSdk (~> 1.0.4)
 
-EXTERNAL SOURCES:
-  EdfaPgSdk:
-    :path: "../edfa-pg-ios-sdk-pod"
+SPEC REPOS:
+  trunk:
+    - EdfaPgSdk
 
 SPEC CHECKSUMS:
   EdfaPgSdk: 5b09e08943d63abfddec46d76efaf25cc143f5c9
 
-PODFILE CHECKSUM: 4f6233148b3f8084448ea3bdf24fd5589dad672c
+PODFILE CHECKSUM: 1113366cc74dd306898b1d3d978f13998d353551
 
 COCOAPODS: 1.13.0
