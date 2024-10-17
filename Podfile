@@ -9,8 +9,8 @@ target 'Sample' do
 #------------------
 ## Pods for Sample
 #------------------
-  pod 'EdfaPgSdk', '~> 1.0.4' ## From POD
-#  pod 'EdfaPgSdk', :path => '../edfa-pg-ios-sdk-pod' ## Local
+#  pod 'EdfaPgSdk', '~> 1.0.4' ## From POD
+  pod 'EdfaPgSdk', :path => '../edfa-pg-ios-sdk-pod' ## Local
 
 #  pod 'EdfaPgSdk', :git => 'https://github.com/edfapay/edfa-pg-ios-sdk-pod.git', :branch => 'main' ## From repo/main
 #  pod 'EdfaPgSdk', :git => 'https://github.com/edfapay/edfa-pg-ios-sdk-pod.git', :branch => 'development' ## From repo/development
