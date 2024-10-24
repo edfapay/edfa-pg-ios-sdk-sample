@@ -39,7 +39,7 @@ final class MainVC: UIViewController {
         
         let order = EdfaPgSaleOrder(
             id: UUID().uuidString,
-            amount: 1.00,
+            amount: 0.12,
             currency: "SAR",
             description: "Test Order"
         )
@@ -66,8 +66,30 @@ final class MainVC: UIViewController {
 //            ),
 //            animated: true
 //        )
-                
         
+        /*
+        // Usage Example:if you want call sdk with your custom UI
+        let edfaPayWithCardDetails = EdfaPayWithCardDetails(viewController: self)
+            .setPayer(payer)
+            .setOrder(order)
+            .onTransactionSuccess { response, result in
+                print("Transaction Success: \(result)")
+                self.show(message: "Success")
+            }
+            .onTransactionFailure { response, error in
+                print("Transaction Failed: \(error)")
+                self.show(message: "Failure")
+
+            }
+            .onError { errors in
+                print("Errors: \(errors)")
+            }
+
+        edfaPayWithCardDetails.doSaleTransaction(cardNumber: "4847838562689713", expiryMonth: 10, expiryYear: 2029, cvv: "454")
+        */
+        
+        
+    
         // The precise way to present by sdk it self
         var cardDetailVC:UIViewController?
         cardDetailVC = EdfaCardPay()
