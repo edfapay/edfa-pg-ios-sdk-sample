@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../edfa-pg-ios-sdk-pod"
 
 SPEC CHECKSUMS:
-  EdfaPgSdk: 5b09e08943d63abfddec46d76efaf25cc143f5c9
+  EdfaPgSdk: 81a7ce184c1f04a2ee33f5ecfb2bb52c3d2bb268
 
-PODFILE CHECKSUM: bf1fc3b820f5c65d73b0f6b93a6d6688e4e8b1b1
+PODFILE CHECKSUM: 3b2d2d200cc8dd1ed112b1a757e782be06080eaf
 
 COCOAPODS: 1.15.2
