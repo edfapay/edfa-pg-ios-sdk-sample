@@ -95,8 +95,8 @@ final class MainVC: UIViewController {
         cardDetailVC = EdfaCardPay()
             .set(order: order)
             .set(payer: payer)
-            .setPaymentType(paymentType: EdfaCardPay.EdfaPayPaymentDesignType.payment_TWO.rawValue)
-            .setLanguage(languageCode: EdfaCardPay.EdfaPaySelectedLanguage.language_ar.rawValue)
+            .setPaymentType(paymentType: EdfaCardPay.EdfaPayPaymentDesignType.payment_ONE.rawValue)
+            .setLanguage(languageCode: EdfaCardPay.EdfaPaySelectedLanguage.language_en.rawValue)
             .on(transactionFailure: { result, err in
                 debugPrint(result ?? "No Result")
                 debugPrint(err ?? "No Error Summary")
