@@ -32,14 +32,15 @@ final class MainVC: UIViewController {
     func doTransaction(ip:String){
         
         let payer = EdfaPgPayer(
-            firstName: "Zohaib", lastName: "Kambrani", address: "a2zzuhaib@gmail.com",
+            firstName: "haseeb", lastName: "buriro", address: "riyadh",
             country: "SA", city: "Riyadh", zip: "123221",
-            email: "a2zzuhaib@gmail.com", phone: "966500409598", ip: ip
+            email: "a2zzuhaib@gmail.com", phone: "737373737", ip: ip
         )
+
         
         let order = EdfaPgSaleOrder(
             id: UUID().uuidString,
-            amount: 0.12,
+            amount: 1.00,
             currency: "SAR",
             description: "Test Order"
         )
@@ -67,7 +68,7 @@ final class MainVC: UIViewController {
 //            animated: true
 //        )
         
-        /*
+       /*
         // Usage Example:if you want call sdk with your custom UI
         let edfaPayWithCardDetails = EdfaPayWithCardDetails(viewController: self)
             .setPayer(payer)
@@ -84,19 +85,17 @@ final class MainVC: UIViewController {
             .onError { errors in
                 print("Errors: \(errors)")
             }
-
-        edfaPayWithCardDetails.doSaleTransaction(cardNumber: "4847838562689713", expiryMonth: 10, expiryYear: 2029, cvv: "454")
+        
+        edfaPayWithCardDetails.doSaleTransaction(cardNumber: "4847838562686614", expiryMonth: 10, expiryYear: 2029, cvv: "444")
         */
-        
-        
     
         // The precise way to present by sdk it self
         var cardDetailVC:UIViewController?
         cardDetailVC = EdfaCardPay()
             .set(order: order)
             .set(payer: payer)
-            .setPaymentType(paymentType: EdfaCardPay.EdfaPayPaymentDesignType.payment_ONE.rawValue)
-            .setLanguage(languageCode: EdfaCardPay.EdfaPaySelectedLanguage.language_en.rawValue)
+            .setPaymentType(paymentType: EdfaCardPay.EdfaPayPaymentDesignType.payment_TWO.rawValue)
+            .setLanguage(languageCode: EdfaCardPay.EdfaPaySelectedLanguage.language_ar.rawValue)
             .on(transactionFailure: { result, err in
                 debugPrint(result ?? "No Result")
                 debugPrint(err ?? "No Error Summary")
@@ -119,6 +118,7 @@ final class MainVC: UIViewController {
                     debugPrint("onPresent :)")
                 }
             )
+        
     }
     
     func show(message:String){
