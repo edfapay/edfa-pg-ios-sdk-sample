@@ -108,7 +108,8 @@ private extension ApplePayVC {
     }
     
     func executeRequest() {
-        
+        pay()
+        return
         
         
         let order = EdfaPgSaleOrder(id: tfOrderId.text ?? "",
@@ -155,5 +156,66 @@ private extension ApplePayVC {
             )
     }
     
+    func pay() {
+        let ip = "1.1.1.1"
+
+        let order = EdfaPgSaleOrder(
+            id: "8A5A1E6B-3459-4F01-A84C-6287468AF789",
+            amount: 1.0,
+            currency: "SAR",
+            description: "Total"
+        )
+                    
+                  
+         let payer = EdfaPgPayer(
+            firstName: "Guest",
+            lastName: "Guest",
+            address: "KSA",
+            country: "SA",
+            city: "Riyadh",
+            zip: "123456",
+            email: "info@vastmenu.com",
+            phone: "+966544392788",
+            ip: ip,
+            options: .init(birthdate: Date().addingTimeInterval(-1000000000))
+
+        )
+
+        
+        print("birth date \(Date().addingTimeInterval(-1000000000))")
+        EdfaApplePay()
+            .set(order: order)
+            .set(payer: payer)
+            .set(applePayMerchantID: APPLEPAY_MERCHANT_ID)
+            .set(merchantCapability: .capability3DS)
+            .on(authentication: { auth in
+                // Handle authentication success
+                debugPrint("Authenticated with payment: \(auth)")
+            })
+            .on(transactionFailure: { res in
+                // Handle transaction failure
+                debugPrint("Transaction failed with response: \(res)")
+            })
+            .on(transactionSuccess: { res in
+                // Handle transaction success
+                guard
+                    let status = res?["status"] as? String, status == "SETTLED",
+                    (res?["result"] as? String) == "SUCCESS",
+                    let transactionId = res?["trans_id"] as? String
+                else {
+                    return
+                }
+                debugPrint("Transaction succeeded with response: \(res)")
+            })
+            .initialize(target: self, onError: { errors in
+                debugPrint("Initialization error: \(errors)")
+            }, onPresent: {
+                debugPrint("Apple Pay sheet presented")
+            })
+        }
+    
 }
+
+
+
 
