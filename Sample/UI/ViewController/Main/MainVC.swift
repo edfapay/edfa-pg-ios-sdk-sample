@@ -9,10 +9,16 @@ import UIKit
 import EdfaPgSdk
 
 final class MainVC: UIViewController {
+    @IBOutlet weak var segDesignType: UISegmentedControl!
+    var cardUiDesignType:EdfaPayDesignType = .one
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    @IBAction func segDesignTypeChanged(_ sender: UISegmentedControl) {
+        cardUiDesignType = EdfaPayDesignType.allCases[sender.selectedSegmentIndex]
     }
     
     @IBAction func btnPayWithCard(_ sender: Any) {
@@ -71,6 +77,8 @@ final class MainVC: UIViewController {
         // The precise way to present by sdk it self
         var cardDetailVC:UIViewController?
         cardDetailVC = EdfaCardPay()
+            .set(designType: cardUiDesignType)
+            .set(language: .ar)
             .set(order: order)
             .set(payer: payer)
             .on(transactionFailure: { result, err in
